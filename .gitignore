@@ -1,5 +1,11 @@
-# Compiled
-*.elc
-
-# Packaging
-.cask
+.id
+auto-save-list/
+bookmarks
+frame-positions.el
+minibuffer-history.el
+Packages/.nosearch
+Packages/ac-comphist.dat
+Packages/elpa/archives
+places.el
+Preferences
+Recent\ Files.el
