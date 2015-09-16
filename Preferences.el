@@ -7,7 +7,9 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer) ;; a more convenient buffer opener
 
 
+;;;;
 ;; Packages
+;;;;
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t) ; Org-mode's repository
@@ -17,7 +19,16 @@
 ;;                         ("marmalade" . "https://marmalade-repo.org/packages/")
 ;;			   ("melpa" . "http://melpa-stable.milkbox.net/packages/")))
 
+;; Load and activate emacs packages. Do this first so that the
+;; packages are loaded before you start trying to modify them.
+;; This also sets the load path.
 (package-initialize)
+
+;; Download the ELPA archive description if needed.
+;; This informs Emacs about the latest versions of all packages, and
+;; makes them available for download.
+(when (not package-archive-contents)
+  (package-refresh-contents))
 
 ;; getting $PATH from shell
 (exec-path-from-shell-initialize)
@@ -65,6 +76,8 @@
 (add-hook 'js2-mode-hook 'ac-js2-mode)
 ; Associating .json files with js2-mode
 (add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
+; Setting the highest level of syntax highlighting for js2-mode
+(setq js2-highlight-level 3)
 
 ;; Using web-mode to work properly with JSX files
 (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
