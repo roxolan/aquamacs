@@ -40,11 +40,11 @@
 ;;;;;;;;;; GO Language Support
 
 ;; GOPATH 
-(setenv "GOPATH" "/Users/1/gocode")
+(setenv "GOPATH" "~/gocode")
 
 ;; gofmt will reformat any go file before saving
 (setq exec-path (cons "/usr/local/go/bin" exec-path))
-(add-to-list 'exec-path "/Users/1/gocode/bin")
+(add-to-list 'exec-path "~/gocode/bin")
 
 ;; adding godef key binding
 (defun my-go-mode-hook ()
@@ -94,3 +94,15 @@
 (autoload 'csharp-mode "csharp-mode" "Major mode for editing C# code." t)
 (setq auto-mode-alist
    (append '(("\\.cs$" . csharp-mode)) auto-mode-alist))
+
+
+;;;;
+;; Customization
+;;;;
+
+;; Add a directory to our load path so that when you `load` things
+;; below, Emacs knows where to look for the corresponding file.
+(add-to-list 'load-path "~/Library/Preferences/Aquamacs Emacs/customizations")
+
+;; Hard-to-categorize customizations
+(load "misc.el")
