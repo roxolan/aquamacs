@@ -6,11 +6,10 @@
 
 (global-set-key (kbd "C-x C-b") 'ibuffer) ;; a more convenient buffer opener
 
-
+(require 'package)
 ;;;;
 ;; Packages
 ;;;;
-(require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t) ; Org-mode's repository
 (add-to-list 'package-archives '("tromey" . "http://tromey.com/elpa/") t)
@@ -30,11 +29,79 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
+;; loading theme
+(load-theme 'fogus t)
+
+;; The packages to be installed.
+;; Also possible to install manually with M-x package-install
+
+(defvar my-packages
+  '(;; makes handling lisp expressions much easier
+    ;; Cheatsheet: http://www.emacswiki.org/emacs/PareditCheatsheet
+    paredit
+
+    ;; key bindings and code colorization for Clojure
+    ;; https://github.com/clojure-emacs/clojure-mode
+    clojure-mode
+
+    ;; extra syntax highlighting for clojure
+    clojure-mode-extra-font-locking
+
+    ;; integration with a Clojure REPL
+    ;; https://github.com/clojure-emacs/cider
+    cider
+
+    ;; allow ido usage in as many contexts as possible. see
+    ido-ubiquitous
+
+    ;; Enhances M-x to allow easier execution of commands. Provides
+    ;; a filterable list of possible commands in the minibuffer
+    ;; http://www.emacswiki.org/emacs/Smex
+    smex
+
+    ;; project navigation
+    projectile
+
+    ;; colorful parenthesis matching
+    rainbow-delimiters
+
+    ;; edit html tags like sexps
+    tagedit
+
+    ;; git integration
+    magit))
+
+
+;; On OS X, an Emacs instance started from the graphical user
+;; interface will have a different environment than a shell in a
+;; terminal window, because OS X does not run a shell during the
+;; login. This will lead to unexpected results when
+;; calling external utilities like make from Emacs.
+;; This library works around this problem by copying important
+;; environment variables from the user's shell.
+;; https://github.com/purcell/exec-path-from-shell
+(if (eq system-type 'darwin)
+  (add-to-list 'my-packages 'exec-path-from-shell))
+
 ;; getting $PATH from shell
 (exec-path-from-shell-initialize)
 
-;; loading theme
-(load-theme 'fogus t)
+;; solution for automatic package installation is taken from:
+;; http://wikemacs.org/wiki/Package.el :
+(require 'cl)
+
+(defun my-packages-installed-p ()
+  (loop for p in my-packages
+        when (not (package-installed-p p)) do (return nil)
+        finally (return t)))
+
+(unless (my-packages-installed-p)
+  ;; check for new packages (package versions)
+  (package-refresh-contents)
+  ;; install the missing packages
+  (dolist (p my-packages)
+    (when (not (package-installed-p p))
+      (package-install p))))
 
 
 ;; Autocomplete
