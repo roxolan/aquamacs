@@ -103,12 +103,6 @@
     (when (not (package-installed-p p))
       (package-install p))))
 
-
-;; Autocomplete
-(require 'go-autocomplete)
-(require 'auto-complete-config)
-(ac-config-default)
-
 ;; ECB
 (require 'ecb)
 
@@ -133,14 +127,6 @@
     ad-do-it))
 
 
-
-
-;; C# Mode
-(autoload 'csharp-mode "csharp-mode" "Major mode for editing C# code." t)
-(setq auto-mode-alist
-   (append '(("\\.cs$" . csharp-mode)) auto-mode-alist))
-
-
 ;;;;
 ;; Customization
 ;;;;
@@ -154,3 +140,10 @@
 
 ;; Language-specific
 (load "setup-go.el")
+(load "setup-csharp.el")
+
+;; Autocomplete
+(require 'go-autocomplete)
+(require 'auto-complete-config)
+(ac-config-default)
+
