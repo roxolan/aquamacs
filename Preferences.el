@@ -31,7 +31,7 @@
 
 ;; loading theme
 (load-theme 'fogus t)
-
+ 
 ;; The packages to be installed.
 ;; Also possible to install manually with M-x package-install
 
@@ -116,6 +116,9 @@
 
 ;; Hard-to-categorize customizations
 (load "misc.el")
+
+;; Customizations that make editing nicer
+(load "editing.el")
 
 ;; Language-specific
 (load "setup-js.el")
