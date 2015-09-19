@@ -6,6 +6,8 @@ minibuffer-history.el
 Packages/.nosearch
 Packages/ac-comphist.dat
 Packages/elpa/archives
+Packages/places
+Packages/backup
 places.el
 Preferences
 Recent\ Files.el

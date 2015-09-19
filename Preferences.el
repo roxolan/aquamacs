@@ -30,7 +30,7 @@
   (package-refresh-contents))
 
 ;; loading theme
-(load-theme 'fogus t)
+(load-theme 'wilson t)
  
 ;; The packages to be installed.
 ;; Also possible to install manually with M-x package-install
