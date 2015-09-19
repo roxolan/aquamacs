@@ -40,4 +40,25 @@
 ;; http://www.emacswiki.org/emacs/RainbowDelimiters
 (require 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+;; using it globally was crashing:
+; (global-rainbow-delimiters-mode t)
 
+;; use 2 spaces for tabs
+;; the function making sure tabs make only 2 spaces
+(defun die-tabs ()
+  (interactive)
+  (set-variable 'tab-width 2)
+  (mark-whole-buffer)
+  (untabify (region-beginning) (region-end))
+  (keyboard-quit))
+
+;; fix weird os x kill error
+(defun ns-get-pasteboard ()
+  "Returns the value of the pasteboard, or nil for unsupported formats."
+  (condition-case nil
+      (ns-get-selection-internal 'CLIPBOARD)
+    (quit nil)))
+
+;; Disabling automatic electric indentation
+;; More on it: http://emacsredux.com/blog/2013/03/29/automatic-electric-indentation/
+(setq electric-indent-mode nil)
