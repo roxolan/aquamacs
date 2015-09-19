@@ -123,6 +123,7 @@
 (load "editing.el")
 
 ;; Language-specific
+(load "setup-elisp.el")
 (load "setup-js.el")
 (load "setup-go.el")
 (load "setup-csharp.el")
