@@ -10,7 +10,7 @@
         try-expand-dabbrev-all-buffers
         try-expand-dabbrev-from-kill
         try-complete-lisp-symbol-partially
-        try-complete-lisp-symbol))
+       try-complete-lisp-symbol))
 
 ;; Highlights matching parenthesis
 (show-paren-mode 1)
@@ -36,5 +36,8 @@
                                                "backups"))))
 (setq auto-save-default nil)
 
-;; enabling rainbows
-(global-rainbow-delimiters-mode t)
+;; enabling Rainbow Delimiters
+;; http://www.emacswiki.org/emacs/RainbowDelimiters
+(require 'rainbow-delimiters)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+

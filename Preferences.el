@@ -4,8 +4,6 @@
 ;; evaluating this file and print errors in the *Messags* buffer.
 ;; Use this file in place of ~/.emacs (which is loaded as well.)
 
-(global-set-key (kbd "C-x C-b") 'ibuffer) ;; a more convenient buffer opener
-
 (require 'package)
 ;;;;
 ;; Packages
@@ -113,6 +111,10 @@
 ;; Add a directory to our load path so that when you `load` things
 ;; below, Emacs knows where to look for the corresponding file.
 (add-to-list 'load-path "~/Library/Preferences/Aquamacs Emacs/customizations")
+
+;; Customizations making it easier to navigate files,
+;; switch buffers, and choose options from the minibuffer.
+(load "navigation.el")
 
 ;; Hard-to-categorize customizations
 (load "misc.el")
