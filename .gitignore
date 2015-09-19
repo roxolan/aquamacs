@@ -3,11 +3,17 @@ auto-save-list/
 bookmarks
 frame-positions.el
 minibuffer-history.el
-Packages/.nosearch
-Packages/ac-comphist.dat
-Packages/elpa/archives
-Packages/places
-Packages/backup
 places.el
 Preferences
 Recent\ Files.el
+
+Packages/.nosearch
+Packages/.recentf
+Packages/.smex-items
+Packages/ac-comphist.dat
+Packages/backup
+Packages/elpa/archives
+Packages/places
+Packages/projectile-bookmarks.eld
+
+
