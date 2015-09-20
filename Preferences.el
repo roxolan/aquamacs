@@ -67,7 +67,10 @@
     tagedit
 
     ;; git integration
-    magit))
+    magit
+
+    ;; coffeescript mode
+    coffee-mode))
 
 
 ;; On OS X, an Emacs instance started from the graphical user

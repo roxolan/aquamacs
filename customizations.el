@@ -30,6 +30,7 @@
       (border-color . "black")
       (background-mode . dark))))
  '(global-hl-line-mode t)
+ '(js-indent-level 2)
  '(ns-tool-bar-display-mode (quote both) t)
  '(ns-tool-bar-size-mode (quote regular) t)
  '(one-buffer-one-frame-mode nil nil (aquamacs-frame-setup))
