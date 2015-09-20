@@ -84,8 +84,6 @@
 (if (eq system-type 'darwin)
   (add-to-list 'my-packages 'exec-path-from-shell))
 
-;; getting $PATH from shell
-(exec-path-from-shell-initialize)
 
 ;; solution for automatic package installation is taken from:
 ;; http://wikemacs.org/wiki/Package.el :
@@ -118,6 +116,10 @@
 ;; Customizations making it easier to navigate files,
 ;; switch buffers, and choose options from the minibuffer.
 (load "navigation.el")
+
+;; Sets up exec-path-from-shell so that Emacs will use the correct
+;; environment variables. This makes more sense for non-aquamacs types of Emacs
+(load "shell-integration.el")
 
 ;; Hard-to-categorize customizations
 (load "misc.el")
