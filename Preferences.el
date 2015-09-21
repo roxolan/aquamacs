@@ -27,8 +27,6 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-;; loading theme
-(load-theme 'wilson t)
  
 ;; The packages to be installed.
 ;; Also possible to install manually with M-x package-install
@@ -116,6 +114,9 @@
 ;; Customizations making it easier to navigate files,
 ;; switch buffers, and choose options from the minibuffer.
 (load "navigation.el")
+
+;; Customizations changin the way Emacs looks and disabling/enabling some user interface elements
+(load "ui.el")
 
 ;; Sets up exec-path-from-shell so that Emacs will use the correct
 ;; environment variables. This makes more sense for non-aquamacs types of Emacs

@@ -5,9 +5,10 @@
  ;; If there is more than one, they won't work right.
  '(aquamacs-additional-fontsets nil t)
  '(aquamacs-autoface-mode nil)
- '(aquamacs-customization-version-id 0 t)
+ '(aquamacs-customization-version-id 307 t)
  '(aquamacs-tool-bar-user-customization nil t)
  '(bookmark-default-file "~/Library/Preferences/Aquamacs Emacs/bookmarks")
+ '(coffee-tab-width 2)
  '(custom-enabled-themes (quote (fogus)))
  '(custom-safe-themes
    (quote
@@ -22,7 +23,6 @@
       (vertical-scroll-bars . right)
       (cursor-type . box)
       (menu-bar-lines . 1)
-      (tool-bar-lines . 1)
       (foreground-color . "#c0c0c0")
       (background-color . "black")
       (mouse-color . "black")
@@ -30,10 +30,10 @@
       (border-color . "black")
       (background-mode . dark))))
  '(global-hl-line-mode t)
+ '(global-linum-mode nil)
  '(js-indent-level 2)
  '(ns-tool-bar-display-mode (quote both) t)
  '(ns-tool-bar-size-mode (quote regular) t)
- '(one-buffer-one-frame-mode nil nil (aquamacs-frame-setup))
  '(tabbar-mode t nil (tabbar))
  '(user-emacs-directory "~/Library/Preferences/Aquamacs Emacs/Packages/")
  '(visual-line-mode t t))
