@@ -130,9 +130,11 @@
 
 ;; Language-specific
 (load "setup-elisp.el")
+(load "setup-clojure.el")
 (load "setup-js.el")
 (load "setup-go.el")
 (load "setup-csharp.el")
+
 
 ;; Autocomplete
 (require 'go-autocomplete)
