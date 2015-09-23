@@ -62,3 +62,28 @@
 ;; Disabling automatic electric indentation
 ;; More on it: http://emacsredux.com/blog/2013/03/29/automatic-electric-indentation/
 (setq electric-indent-mode nil)
+
+
+;;;;;
+;; Yasnippet + Auto-complete
+;;;;;
+;; inherited from: https://truongtx.me/2013/01/06/config-yasnippet-and-autocomplete-on-emacs/
+
+;; should be loaded before auto complete so that they can work together
+(require 'yasnippet)
+(setq yas-snippet-dirs (concat user-emacs-directory "snippets"))
+(yas-global-mode 1)
+
+;;; auto complete mod
+;;; should be loaded after yasnippet so that they can work together
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories (concat user-emacs-directory "ac-dict"))
+(ac-config-default)
+;;; set the trigger key so that it can work together with yasnippet on tab key,
+;;; if the word exists in yasnippet, pressing tab will cause yasnippet to
+;;; activate, otherwise, auto-complete will
+(ac-set-trigger-key "TAB")
+(ac-set-trigger-key "<tab>")
+
+;; TODO remove default key bindings for yasnippet:
+; http://sethlakowske.com/why-i-use-emacs/fix-yasnippet-and-autocomplete-tab-key-collision/
