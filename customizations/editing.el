@@ -69,7 +69,7 @@
 ;;;;;
 
 (require 'yasnippet)
-(setq yas-snippet-dirs (concat user-emacs-directory "snippets"))
+(add-to-list 'yas-snippet-dirs (concat user-emacs-directory "snippets"))
 (yas-global-mode t)
 
 ;; Remove Yasnippet's default tab key binding

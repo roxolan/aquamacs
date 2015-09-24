@@ -68,7 +68,10 @@
     magit
 
     ;; coffeescript mode
-    coffee-mode))
+    coffee-mode
+
+    ;; Yasnippets for React
+    react-snippets))
 
 
 ;; On OS X, an Emacs instance started from the graphical user
