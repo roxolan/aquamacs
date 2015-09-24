@@ -67,23 +67,23 @@
 ;;;;;
 ;; Yasnippet + Auto-complete
 ;;;;;
-;; inherited from: https://truongtx.me/2013/01/06/config-yasnippet-and-autocomplete-on-emacs/
 
-;; should be loaded before auto complete so that they can work together
 (require 'yasnippet)
 (setq yas-snippet-dirs (concat user-emacs-directory "snippets"))
-(yas-global-mode 1)
+(yas-global-mode t)
+
+;; Remove Yasnippet's default tab key binding
+(define-key yas-minor-mode-map (kbd "<tab>") nil)
+(define-key yas-minor-mode-map (kbd "TAB") nil)
+;; Set Yasnippet's key binding to shift+tab
+(define-key yas-minor-mode-map (kbd "<backtab>") 'yas-expand)
+;; Alternatively use Control-c + tab
+(define-key yas-minor-mode-map (kbd "\C-c TAB") 'yas-expand)
 
 ;;; auto complete mod
-;;; should be loaded after yasnippet so that they can work together
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories (concat user-emacs-directory "ac-dict"))
 (ac-config-default)
-;;; set the trigger key so that it can work together with yasnippet on tab key,
-;;; if the word exists in yasnippet, pressing tab will cause yasnippet to
-;;; activate, otherwise, auto-complete will
+(global-auto-complete-mode t)
 (ac-set-trigger-key "TAB")
 (ac-set-trigger-key "<tab>")
-
-;; TODO remove default key bindings for yasnippet:
-; http://sethlakowske.com/why-i-use-emacs/fix-yasnippet-and-autocomplete-tab-key-collision/
