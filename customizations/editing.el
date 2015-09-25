@@ -87,3 +87,19 @@
 (global-auto-complete-mode t)
 (ac-set-trigger-key "TAB")
 (ac-set-trigger-key "<tab>")
+
+
+;;;;;
+;; paredit
+;;;;;
+
+;; Using paredit with non lisp mode
+;; https://truongtx.me/2014/02/22/emacs-using-paredit-with-non-lisp-mode/
+(defun my-paredit-nonlisp ()
+  "Turn on paredit mode for non-lisps."
+  (interactive)
+  (set (make-local-variable 'paredit-space-for-delimiter-predicates)
+       '((lambda (endp delimiter) nil)))
+  (paredit-mode 1))
+
+(add-hook 'js-mode-hook 'my-paredit-nonlisp)

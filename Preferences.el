@@ -128,9 +128,6 @@
 ;; Hard-to-categorize customizations
 (load "misc.el")
 
-;; Customizations that make editing nicer
-(load "editing.el")
-
 ;; Language-specific
 (load "setup-elisp.el")
 (load "setup-clojure.el")
@@ -138,6 +135,9 @@
 (load "setup-go.el")
 (load "setup-csharp.el")
 
+;; Customizations that make editing nicer
+;; They include connecting paredit to work with non-lisp mode, so this is moved to be loaded after setup-js
+(load "editing.el")
 
 ;; Autocomplete
 (require 'go-autocomplete)
