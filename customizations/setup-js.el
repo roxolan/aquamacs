@@ -10,10 +10,12 @@
 (add-to-list 'auto-mode-alist '("\\.es6$" . js2-mode))
 ; Setting the highest level of syntax highlighting for js2-mode
 (setq js2-highlight-level 3)
+; Setting 2 spaces for indentation
+(setq-default js2-basic-offset 2)
 
 (add-hook 'js-mode-hook 'subword-mode)
 (add-hook 'html-mode-hook 'subword-mode)
-; (setq js-indent-level 2)
+
 
 (eval-after-load "sgml-mode"
   '(progn
