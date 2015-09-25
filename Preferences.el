@@ -71,7 +71,11 @@
     coffee-mode
 
     ;; Yasnippets for React
-    react-snippets))
+    react-snippets
+
+    ;; On-the-fly syntax checking
+    ;; https://github.com/flycheck/flycheck
+    flycheck))
 
 
 ;; On OS X, an Emacs instance started from the graphical user
