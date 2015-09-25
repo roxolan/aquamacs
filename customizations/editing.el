@@ -102,4 +102,9 @@
        '((lambda (endp delimiter) nil)))
   (paredit-mode 1))
 
+;; enabling paredit for JS files
 (add-hook 'js-mode-hook 'my-paredit-nonlisp)
+
+;; making paredit work for curly braces as well
+(define-key js-mode-map "{" 'paredit-open-curly)
+(define-key js-mode-map "}" 'paredit-close-curly-and-newline)

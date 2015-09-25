@@ -43,3 +43,5 @@
 ;;;;;;;; JavaScript-related Yasnippets
 ;; react-snippets from https://github.com/johnmastro/react-snippets.el
 (require 'react-snippets)
+
+(require 'js)
