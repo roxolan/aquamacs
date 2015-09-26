@@ -113,6 +113,7 @@
 ;;;;;
 ;; flycheck
 ;;;;;
+;; https://github.com/flycheck/flycheck
 (require 'flycheck)
 ;; flycheck has built-in support for jshint, so no need to install jshint-mode anymore
 ;; this will activate flycheck any time .js file is opened:
@@ -120,3 +121,26 @@
 ;; https://truongtx.me/2014/02/21/emacs-setup-jshint-for-on-the-fly-petential-error-checking/
 (add-hook 'js-mode-hook
           (lambda () (flycheck-mode t)))
+
+;;;;;
+;; jsxhint
+;;;;;
+;; ideas from: https://truongtx.me/2014/03/10/emacs-setup-jsx-mode-and-jsx-syntax-checking/
+;; jsxhint is an npm package that must be installed prior to being used:
+;; $ npm install -g jsxhint
+;; it can also be checked and used just from command line:
+;; $ jsxhint example.jsx
+;; to integrate it with Emacs, flycheck (newer version of flymake) must be intstalled, and jsxhint is available 
+;; inside Emacs's path or via exec-path-from-shell
+(flycheck-define-checker jsxhint-checker
+  "A JSX syntax and style checker based on JSXHint."
+  :command ("jsxhint" source)
+  :error-patterns
+  ((error line-start (1+ nonl) ": line " line ", col " column ", " (message) line-end))
+  :modes (web-mode))
+(add-hook 'web-mode-hook
+          (lambda ()
+            (when (equal web-mode-content-type "jsx")
+              ;; enable flycheck
+              (flycheck-select-checker 'jsxhint-checker)
+              (flycheck-mode))))

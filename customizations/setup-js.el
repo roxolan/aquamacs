@@ -24,7 +24,13 @@
      (add-hook 'html-mode-hook (lambda () (tagedit-mode 1)))))
 
 
+;;;;;
+;; JSX
+;;;;;
 ;; Using web-mode to work properly with JSX files
+;; inspired by https://truongtx.me/2014/03/10/emacs-setup-jsx-mode-and-jsx-syntax-checking/
+;; jsx-mode package seems to lack sufficient support https://github.com/jsx/jsx-mode.el
+
 (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
 (defadvice web-mode-highlight-part (around tweak-jsx activate)
   (if (equal web-mode-content-type "jsx")
@@ -33,7 +39,10 @@
     ad-do-it))
 
 
+;;;;;
 ;; coffeescript
+;;;;;
+
 (add-to-list 'auto-mode-alist '("\\.coffee.erb$" . coffee-mode))
 (add-hook 'coffee-mode-hook 'subword-mode)
 (add-hook 'coffee-mode-hook 'highlight-indentation-current-column-mode)
