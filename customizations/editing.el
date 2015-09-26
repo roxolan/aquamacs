@@ -108,3 +108,15 @@
 ;; making paredit work for curly braces as well
 (define-key js-mode-map "{" 'paredit-open-curly)
 (define-key js-mode-map "}" 'paredit-close-curly-and-newline)
+
+
+;;;;;
+;; flycheck
+;;;;;
+(require 'flycheck)
+;; flycheck has built-in support for jshint, so no need to install jshint-mode anymore
+;; this will activate flycheck any time .js file is opened:
+;; using flycheck as superior to flymake is suggested by:
+;; https://truongtx.me/2014/02/21/emacs-setup-jshint-for-on-the-fly-petential-error-checking/
+(add-hook 'js-mode-hook
+          (lambda () (flycheck-mode t)))
