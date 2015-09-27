@@ -82,7 +82,11 @@
     ;; JS2 refactor plugin
     ;; Desctiption, including refactoring functions keywords:
     ;; https://github.com/magnars/js2-refactor.el
-    js2-refactor))
+    js2-refactor
+
+    ;; Tern.js
+    tern
+    tern-auto-complete))
 
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -155,3 +159,12 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
+;; TODO install tern
+;; https://truongtx.me/2014/04/20/emacs-javascript-completion-and-refactoring/
+;; http://ternjs.net/
+
+;; TODO install helm
+;; https://github.com/emacs-helm/helm
+
+;; TODO work more on discover mode:
+;; https://www.masteringemacs.org/article/discoverel-discover-emacs-context-menus

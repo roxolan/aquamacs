@@ -67,3 +67,17 @@
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
 (js2r-add-keybindings-with-prefix "C-c C-m")
 ;; eg. extract function with `C-c C-m ef`
+
+;;;;;
+;; Tern.js :: http://ternjs.net/
+;;;;;
+;; described at: https://truongtx.me/2014/04/20/emacs-javascript-completion-and-refactoring/
+;; Needs to be installed first via npm:
+;; $ npm install -g tern
+;; Initializing Tern and tern-auto-complete:
+(add-hook 'js-mode-hook (lambda () (tern-mode t)))
+(eval-after-load 'tern
+   '(progn
+      (require 'tern-auto-complete)
+      (tern-ac-setup)))
+;; TODO finish with Tern.js
