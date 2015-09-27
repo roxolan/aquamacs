@@ -58,3 +58,12 @@
 (require 'react-snippets)
 
 (require 'js)
+
+;;;;;
+;; js2-refactor
+;;;;;
+;; available refactorings are listed at: https://github.com/magnars/js2-refactor.el
+(require 'js2-refactor)
+(add-hook 'js2-mode-hook #'js2-refactor-mode)
+(js2r-add-keybindings-with-prefix "C-c C-m")
+;; eg. extract function with `C-c C-m ef`

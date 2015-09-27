@@ -75,7 +75,14 @@
 
     ;; On-the-fly syntax checking
     ;; https://github.com/flycheck/flycheck
-    flycheck))
+    flycheck
+
+    js2-mode
+
+    ;; JS2 refactor plugin
+    ;; Desctiption, including refactoring functions keywords:
+    ;; https://github.com/magnars/js2-refactor.el
+    js2-refactor))
 
 
 ;; On OS X, an Emacs instance started from the graphical user
