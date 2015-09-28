@@ -70,8 +70,8 @@
 
 ;;;;;
 ;; Tern.js :: http://ternjs.net/
+;; http://ternjs.net/doc/manual.html
 ;;;;;
-;; described at: https://truongtx.me/2014/04/20/emacs-javascript-completion-and-refactoring/
 ;; Needs to be installed first via npm:
 ;; $ npm install -g tern
 ;; Initializing Tern and tern-auto-complete:
@@ -80,4 +80,13 @@
    '(progn
       (require 'tern-auto-complete)
       (tern-ac-setup)))
-;; TODO finish with Tern.js
+;; For the auto completion to work properly in your Node.js project, the project directory should contain a file named .tern-project with the content like this:
+;; {
+;;   "plugins": {
+;;     "node": {
+;;     }
+;;   }
+;; }
+;; Tern.js documentation on configs: http://ternjs.net/doc/manual.html#configuration
+;; TODO engage more with Tern.js, including support for JSX, support for NodeJS & Browserify projects:
+;; https://truongtx.me/2014/04/20/emacs-javascript-completion-and-refactoring/

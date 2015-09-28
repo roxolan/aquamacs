@@ -159,12 +159,10 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
-;; TODO install tern
-;; https://truongtx.me/2014/04/20/emacs-javascript-completion-and-refactoring/
-;; http://ternjs.net/
-
-;; TODO install helm
-;; https://github.com/emacs-helm/helm
 
 ;; TODO work more on discover mode:
 ;; https://www.masteringemacs.org/article/discoverel-discover-emacs-context-menus
+
+;; TODO engage with helm & ctags, maybe:
+;; https://github.com/emacs-helm/helm
+;; https://truongtx.me/2014/04/20/emacs-javascript-completion-and-refactoring/
