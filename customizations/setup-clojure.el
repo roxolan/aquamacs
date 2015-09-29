@@ -85,3 +85,5 @@
 ;;;;;
 ;; https://github.com/clojure-emacs/cider-nrepl
  
+;; TODO install clj-refactor & maybe other missing?
+;; https://github.com/clojure-emacs/example-config
