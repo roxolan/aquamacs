@@ -104,6 +104,7 @@
 
 ;; enabling paredit for JS files
 (add-hook 'js-mode-hook 'my-paredit-nonlisp)
+(add-hook 'go-mode-hook 'my-paredit-nonlisp)
 
 ;; making paredit work for curly braces as well
 (define-key js-mode-map "{" 'paredit-open-curly)
