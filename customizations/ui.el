@@ -24,7 +24,7 @@
 ; (load-theme 'tomorrow-night-bright t)
 
 ;; loading theme
-(load-theme 'wilson t)
+(load-theme 'brin t)
 
 ;; increase font size for better readability
 ; (set-face-attribute 'default nil :height 140)

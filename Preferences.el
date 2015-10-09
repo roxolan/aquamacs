@@ -86,7 +86,10 @@
 
     ;; Tern.js
     tern
-    tern-auto-complete))
+    tern-auto-complete
+
+    ;; Gradle support
+    gradle-mode))
 
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -149,6 +152,7 @@
 (load "setup-js.el")
 (load "setup-go.el")
 (load "setup-csharp.el")
+(load "setup-java.el")
 
 ;; Customizations that make editing nicer
 ;; They include connecting paredit to work with non-lisp mode, so this is moved to be loaded after setup-js
