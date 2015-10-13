@@ -89,7 +89,10 @@
     tern-auto-complete
 
     ;; Gradle support
-    gradle-mode))
+    gradle-mode
+
+    ;; Java support
+    java-snippets))
 
 
 ;; On OS X, an Emacs instance started from the graphical user
