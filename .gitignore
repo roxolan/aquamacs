@@ -14,8 +14,10 @@ Packages/ac-comphist.dat
 Packages/backup
 Packages/cider-history
 Packages/elpa/archives
+Packages/eshell/
 Packages/places
 Packages/projectile-bookmarks.eld
+
 
 snippets/yasnippet-golang
 
