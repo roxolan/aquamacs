@@ -98,6 +98,7 @@
     java-snippets
 
     ;; Ruby & Rails support
+    enh-ruby-mode
     robe
     ruby-refactor
     projectile-rails))
