@@ -7,6 +7,14 @@
 (add-hook 'ruby-mode-hook 'robe-mode)
 
 ;;;;;
+;; Ruby refactor
+;;;;;
+;; https://github.com/ajvargo/ruby-refactor
+(add-hook 'ruby-mode-hook 'ruby-refactor-mode-launch)
+
+
+
+;;;;;
 ;; Projectile Rails
 ;;;;; 
 ;; depends on projectile (enabled globally in navigation.el)
@@ -16,5 +24,4 @@
 
 ;; TODO:
 ; enh-ruby-mode https://github.com/zenspider/enhanced-ruby-mode
-; ruby-refactor https://github.com/ajvargo/ruby-refactor
 ; other ruby goodies from melpa

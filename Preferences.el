@@ -99,6 +99,7 @@
 
     ;; Ruby & Rails support
     robe
+    ruby-refactor
     projectile-rails))
 
 
