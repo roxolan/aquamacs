@@ -98,6 +98,7 @@
     java-snippets
 
     ;; Ruby & Rails support
+    robe
     projectile-rails))
 
 
