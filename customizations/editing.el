@@ -21,6 +21,24 @@
 ;; Don't use hard tabs
 (setq-default indent-tabs-mode nil)
 
+
+;;;;;
+;; Web Mode
+;;;;;
+;; http://web-mode.org/
+;; After web-mode is installed:
+(require 'web-mode)
+;; Template types enabled to be run via web-mode:
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+; an option for html, too:
+; (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
 ;; When you visit a file, point goes to the last place where it
 ;; was when you previously visited the same file.
 ;; http://www.emacswiki.org/emacs/SavePlace

@@ -67,6 +67,10 @@
     ;; git integration
     magit
 
+    ;; web-mode for editing templates:
+    ;; http://web-mode.org/
+    web-mode
+
     ;; coffeescript mode
     coffee-mode
 
