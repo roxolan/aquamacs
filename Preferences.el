@@ -90,9 +90,11 @@
 
     ;; Gradle support
     gradle-mode
-
     ;; Java support
-    java-snippets))
+    java-snippets
+
+    ;; Ruby & Rails support
+    projectile-rails))
 
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -151,6 +153,7 @@
 
 ;; Language-specific
 (load "setup-elisp.el")
+(load "setup-ruby.el")
 (load "setup-clojure.el")
 (load "setup-js.el")
 (load "setup-go.el")
