@@ -28,4 +28,16 @@
 ;; https://github.com/syohex/emacs-helm-ag
 
 
+;;;;;
+;; Cask / pallet
+;;;;;
+;; Cask needs to be installed: 
+;; http://cask.readthedocs.org/en/latest/guide/installation.html
+;; For example, via brew:
+;; $ brew install cask # also installs emacs (currently ver.24.5.1) via brew
+;; Cask should be added to the path, but brew pours it into /usr/local/bin/, so no special steps seem to be necessary
+ 
+ 
+
+
 
