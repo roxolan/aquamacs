@@ -101,7 +101,10 @@
     enh-ruby-mode
     robe
     ruby-refactor
-    projectile-rails))
+    projectile-rails
+
+    ;; The Silver Searcher / Ag (more about it in misc.el)
+    ag))
 
 
 ;; On OS X, an Emacs instance started from the graphical user

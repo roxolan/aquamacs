@@ -7,6 +7,12 @@
 (autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
 (add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
 (add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
+(setq enh-ruby-bounce-deep-indent t)
+(setq enh-ruby-hanging-brace-indent-level 2)
+;; more configuration of enh-ruby-mode suggested:
+; https://gist.github.com/gnufied/7160799
+
+
 
 ;;;;;
 ;; Robe
@@ -30,7 +36,6 @@
 
 
 ;; TODO:
-; enh-ruby-mode https://github.com/zenspider/enhanced-ruby-mode
-; fix yasnippets for enh-ruby-mode
+; install Cask http://cask.readthedocs.org/en/latest/guide/introduction.html
 ; proceed with ror goodies from http://crypt.codemancers.com/posts/2013-09-26-setting-up-emacs-as-development-environment-on-osx/
 ; other ruby goodies from melpa?
