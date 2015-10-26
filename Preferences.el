@@ -32,7 +32,10 @@
 ;; Also possible to install manually with M-x package-install
 
 (defvar my-packages
-  '(;; makes handling lisp expressions much easier
+  '(;; Package management helper, requires Cask to be installed in the system:
+    pallet
+
+    ;; makes handling lisp expressions much easier
     ;; Cheatsheet: http://www.emacswiki.org/emacs/PareditCheatsheet
     paredit
 

@@ -36,8 +36,10 @@
 ;; For example, via brew:
 ;; $ brew install cask # also installs emacs (currently ver.24.5.1) via brew
 ;; Cask should be added to the path, but brew pours it into /usr/local/bin/, so no special steps seem to be necessary
- 
- 
+;; When installed via brew, Cask is located in /usr/local/Cellar/cask/<version 
+;;;;;
+;; Cask installation.
+;; After adding pallet to the list of packages that must be installed,  
 
 
 
