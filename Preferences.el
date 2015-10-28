@@ -114,6 +114,7 @@
     robe
     ruby-refactor
     projectile-rails
+    rinari
 
     ;; The Silver Searcher / Ag (more about it in misc.el)
     ag))

@@ -12,6 +12,12 @@
 ;; more configuration of enh-ruby-mode suggested:
 ; https://gist.github.com/gnufied/7160799
 
+;;;;;
+;; rinari
+;;;;;
+;; turning it on
+(require 'rinari)
+(global-rinari-mode)
 
 
 ;;;;;
