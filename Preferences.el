@@ -35,6 +35,9 @@
   '(;; Package management helper, requires Cask to be installed in the system:
     pallet
 
+    ;; auto-completion system
+    auto-complete
+
     ;; makes handling lisp expressions much easier
     ;; Cheatsheet: http://www.emacswiki.org/emacs/PareditCheatsheet
     paredit

@@ -29,9 +29,9 @@
 
 
 ;;;;;
-;; Cask / pallet
+;; Cask
 ;;;;;
-;; Cask needs to be installed: 
+;; Before using pallet, Cask needs to be installed: 
 ;; http://cask.readthedocs.org/en/latest/guide/installation.html
 ;; For example, via brew:
 ;; $ brew install cask # also installs emacs (currently ver.24.5.1) via brew
@@ -40,6 +40,12 @@
 ;;;;;
 ;; Cask installation.
 ;; After adding pallet to the list of packages that must be installed,  
+;;;;;
+;; pallet 
+;;;;;
+;; https://github.com/rdallasgray/pallet
+;; seems to be geared towards original GNU Emacs, so additional work for Aquamacs might be required.
+;; relaxing until further opportunity
 
 
 

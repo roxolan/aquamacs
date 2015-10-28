@@ -36,6 +36,5 @@
 
 
 ;; TODO:
-; install Cask http://cask.readthedocs.org/en/latest/guide/introduction.html
 ; proceed with ror goodies from http://crypt.codemancers.com/posts/2013-09-26-setting-up-emacs-as-development-environment-on-osx/
 ; other ruby goodies from melpa?
