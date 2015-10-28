@@ -111,6 +111,21 @@
 
 
 ;;;;;
+;; smartparens
+;;;;;
+;; https://github.com/Fuco1/smartparens
+;;;;;
+;; more about it with example of using use-package:
+;; https://ebzzry.github.io/emacs-pairs.html
+(require 'smartparens-config)
+(require 'smartparens-ruby)
+(smartparens-global-mode)
+(show-smartparens-global-mode t)
+(sp-with-modes '(rhtml-mode)
+  (sp-local-pair "<" ">")
+  (sp-local-pair "<%" "%>"))
+
+;;;;;
 ;; paredit
 ;;;;;
 

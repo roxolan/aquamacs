@@ -35,10 +35,16 @@
   '(;; Package management helper, requires Cask to be installed in the system:
     pallet
 
+    ;; special macro allowing to isolate package configuration
+    use-package
+
     ;; auto-completion system
     auto-complete
 
-    ;; makes handling lisp expressions much easier
+    ;; new project dealing with parens of various kinds
+    smartparens
+
+    ;; traditional parens mode, makes handling lisp expressions much easier
     ;; Cheatsheet: http://www.emacswiki.org/emacs/PareditCheatsheet
     paredit
 
