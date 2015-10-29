@@ -114,6 +114,9 @@
     ;; Java support
     java-snippets
 
+    ;; Yaml support:
+    yaml-mode
+
     ;; Ruby & Rails support
     enh-ruby-mode
     robe
