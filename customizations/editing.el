@@ -15,8 +15,8 @@
 ;; Highlights matching parenthesis
 (show-paren-mode 1)
 
-;; Highlight current line
-(global-hl-line-mode 1)
+;; Highlight current line: disable
+(global-hl-line-mode -1) 
 
 ;; Don't use hard tabs
 (setq-default indent-tabs-mode nil)
@@ -98,7 +98,7 @@
 ;; Alternatively use Control-c + tab
 (define-key yas-minor-mode-map (kbd "\C-c TAB") 'yas-expand)
 
-;;; auto complete mod
+;;; autocomplete
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories (concat user-emacs-directory "ac-dict"))
 (ac-config-default)

@@ -194,8 +194,8 @@
 
 ;; Autocomplete
 (require 'go-autocomplete)
-(require 'auto-complete-config)
-(ac-config-default)
+
+
 
 
 ;; TODO work more on discover mode:

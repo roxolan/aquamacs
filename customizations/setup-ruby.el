@@ -5,8 +5,8 @@
 ;;;;;
 ;; https://github.com/zenspider/Enhanced-Ruby-Mode 
 (autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
-(add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
-(add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
+;(add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
+;(add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
 (setq enh-ruby-bounce-deep-indent t)
 (setq enh-ruby-hanging-brace-indent-level 2)
 ;; more configuration of enh-ruby-mode suggested:
@@ -24,13 +24,13 @@
 ;; Robe
 ;;;;;
 ;; https://github.com/dgutov/robe
-(add-hook 'enh-ruby-mode-hook 'robe-mode)
+(add-hook 'ruby-mode-hook 'robe-mode)
 
 ;;;;;
 ;; Ruby refactor
 ;;;;;
 ;; https://github.com/ajvargo/ruby-refactor
-(add-hook 'enh-ruby-mode-hook 'ruby-refactor-mode-launch)
+(add-hook 'ruby-mode-hook 'ruby-refactor-mode-launch)
 
 
 ;;;;;
