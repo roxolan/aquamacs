@@ -59,8 +59,13 @@
     ;; https://github.com/clojure-emacs/cider
     cider
 
-    ;; allow ido usage in as many contexts as possible. see
+    ;; allow ido usage in as many contexts as possible
     ido-ubiquitous
+
+    ;; Fuzzy matching, a la Sublime Text, based on flx matching engine, 
+    ;; which will be pulled in as a dependency
+    ;; https://github.com/lewang/flx
+    flx-ido
 
     ;; Enhances M-x to allow easier execution of commands. Provides
     ;; a filterable list of possible commands in the minibuffer

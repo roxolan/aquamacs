@@ -1,6 +1,11 @@
 ;; These customizations make it easier to navigate files,
 ;; switch buffers, and choose options from the minibuffer.
 
+;;;;;
+;; Projectile
+;;;;;
+;; https://github.com/bbatsov/projectile
+;;;;;
 ;; Enabling projectile everywhere
 (projectile-global-mode)
 
@@ -24,15 +29,31 @@
 (recentf-mode 1)
 (setq recentf-max-menu-items 40)
 
-
-;; IDO-MODE
+;;;;;
+;; IDO-MODE @@
+;;;;;
 ;; ido-mode allows you to more easily navigate choices. For example,
 ;; when you want to switch buffers, ido presents you with a list
 ;; of buffers in the the mini-buffer. As you start to type a buffer's
 ;; name, ido will narrow down the list of buffers to match the text
 ;; you've typed in
 ;; http://www.emacswiki.org/emacs/InteractivelyDoThings
-(ido-mode t)
+(ido-mode 1)
+(ido-everywhere 1)
+
+;;;;;
+;; flx-ido
+;; Fuzzy matching, a la Sublime Text, based on Flx match engine
+;;;;;
+;; https://github.com/lewang/flx
+;;;;;
+(require 'flx-ido)
+(flx-ido-mode 1)
+;; disable ido faces to see flx highlights
+(setq ido-enable-flex-matching t)
+(setq ido-use-faces nil)
+;; if you don't want to use flx's highlights, you can turn them on with this:
+; (setq flx-ido-use-faces nil)
 
 ;; Enabling partial matches
 (setq ido-enable-flex-matching t)
