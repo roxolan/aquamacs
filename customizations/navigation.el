@@ -8,6 +8,9 @@
 ;;;;;
 ;; Enabling projectile everywhere
 (projectile-global-mode)
+;; grizzl is selected as a completion system, to play with it and see 
+;; how it is better/worse than ido-mode or helm
+(setq projectile-completion-system 'grizzl)
 
 ;; a more convenient buffer opener
 (global-set-key (kbd "C-x C-b") 'ibuffer)
@@ -30,7 +33,7 @@
 (setq recentf-max-menu-items 40)
 
 ;;;;;
-;; IDO-MODE @@
+;; IDO-MODE
 ;;;;;
 ;; ido-mode allows you to more easily navigate choices. For example,
 ;; when you want to switch buffers, ido presents you with a list

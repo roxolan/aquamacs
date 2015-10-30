@@ -67,6 +67,12 @@
     ;; https://github.com/lewang/flx
     flx-ido
 
+    ;; also enabling grizzl, a completing-read tool 
+    ;; that is somewhat competing with ido-mode and helm
+    ;; intending still to try it within the projectile
+    ;; https://github.com/grizzl/grizzl
+    grizzl
+
     ;; Enhances M-x to allow easier execution of commands. Provides
     ;; a filterable list of possible commands in the minibuffer
     ;; http://www.emacswiki.org/emacs/Smex
@@ -123,6 +129,7 @@
     ruby-refactor
     projectile-rails
     rinari
+    yari
 
     ;; The Silver Searcher / Ag (more about it in misc.el)
     ag))
