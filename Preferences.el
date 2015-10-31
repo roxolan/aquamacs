@@ -87,6 +87,9 @@
     ;; edit html tags like sexps
     tagedit
 
+    ;; A modern list library, required by magit
+    dash
+
     ;; git integration
     magit
 

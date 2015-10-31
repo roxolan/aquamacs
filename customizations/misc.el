@@ -48,4 +48,7 @@
 ;; relaxing until further opportunity
 
 
-
+;;;;;
+;; Magit 
+;;;;;
+(require 'magit)
