@@ -78,12 +78,3 @@
      (define-key clojure-mode-map (kbd "C-M-r") 'cider-refresh)
      (define-key clojure-mode-map (kbd "C-c u") 'cider-user-ns)
      (define-key cider-mode-map (kbd "C-c u") 'cider-user-ns)))
-
-
-;;;;;
-;; CIDER nREPL
-;;;;;
-;; https://github.com/clojure-emacs/cider-nrepl
- 
-;; TODO install clj-refactor & maybe other missing?
-;; https://github.com/clojure-emacs/example-config

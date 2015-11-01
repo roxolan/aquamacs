@@ -17,7 +17,7 @@ Packages/elpa/archives
 Packages/eshell/
 Packages/places
 Packages/projectile-bookmarks.eld
-
+Packages/url/cache/
 
 snippets/yasnippet-golang
 

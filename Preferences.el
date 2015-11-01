@@ -207,15 +207,3 @@
 
 ;; Autocomplete
 (require 'go-autocomplete)
-
-
-
-
-;; TODO work more on discover mode:
-;; https://www.masteringemacs.org/article/discoverel-discover-emacs-context-menus
-
-;; TODO engage with helm & ctags, maybe:
-;; https://github.com/emacs-helm/helm
-;; https://truongtx.me/2014/04/20/emacs-javascript-completion-and-refactoring/
-
-;; TODO proceed with https://www.masteringemacs.org/article/beginners-guide-to-emacs
